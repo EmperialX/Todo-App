@@ -1,0 +1,161 @@
+:root {
+background: #f5f6fa;
+color: #9c9c9c;
+font: 1rem "PT Sans", sans-serif;
+}
+body {
+font-family: "PT Sans", sans-serif;
+font-weight: bold;
+}
+html, body, #root {
+height: 100%;
+}
+
+a {
+color: inherit;
+}
+
+a:hover {
+color: #7f8ff4;
+}
+
+#root {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.uppercase {
+text-transform: uppercase;
+}
+
+.btn {
+display: inline-block;
+background: transparent;
+color: inherit;
+font: inherit;
+border: 0;
+outline: 0;
+padding: 0;
+transition: all 200ms ease-in;
+cursor: pointer;
+}
+
+.btn--primary {
+background: #7f8ff4;
+color: #fff;
+box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+padding: 12px 36px;
+}
+
+.btn--inside {
+margin-left: -96px;
+}
+
+.form__field {
+width: 360px;
+background: #fff;
+color: #a3a3a3;
+font: inherit;
+box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+border: 0;
+outline: 0;
+padding: 22px 18px;
+}
+
+/* ... rest of your CSS ... */
+header {
+display: flex;
+align-items: stretch;
+max-width: 800px;
+width: 100%;
+margin: 0 auto;
+gap: 14px;
+}
+
+header input {
+flex: 1;
+border: 0;
+border-bottom: 2px solid $gray;
+outline: 0;
+font-size: 1.3rem;
+color: $input-text-color;
+padding: 7px 0;
+background: $input-bg-color;
+transition: border-color 0.2s;
+
+&::placeholder {
+color: $input-text-color;
+}
+}
+
+
+
+header button {
+border-radius: 14px;
+background: $button-bg-color;
+color: $button-text-color;
+transition-duration: 200ms;
+cursor: pointer;
+padding: 14px 18px;
+border: none;
+outline: none;
+}
+
+header button:hover {
+opacity: 0.7;
+}
+
+//** Main Styles */
+.main {
+display: flex;
+flex-direction: column;
+gap: 14px;
+max-width: 800px;
+width: 100%;
+margin: 0 auto;
+}
+
+.todoItem {
+display: flex;
+align-items: center;
+gap: 14px;
+padding: 14px;
+border-radius: 14px;
+background: $input-bg-color;
+}
+
+.todoItem p {
+flex: 1;
+}
+
+.actionsContainer {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+
+.actionsContainer button {
+transition-duration: 200ms;
+border: none;
+background: transparent;
+cursor: pointer;
+}
+
+.actionsContainer button:hover {
+opacity: 0.7;
+}
+
+//** Responsive Styles */
+@media (min-width: 640px) {
+header button,
+header input {
+font-size: 1.2em;
+}
+
+p {
+font-size: 1em;
+}
+}
